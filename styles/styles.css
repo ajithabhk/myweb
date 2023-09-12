@@ -752,7 +752,7 @@ section {
     background-color: var(--color-grey-5);
   }
   .controls .control {
-    margin: 1rem 0.3rem;
+    margin: 1rem 0.1rem;
   }
 
   .about-container {
