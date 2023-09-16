@@ -4,7 +4,41 @@
   box-sizing: border-box;
   list-style: none;
 }
-
+.loader{
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  z-index: 100;
+  transition: opacity 1.75s, visibility 1.75s;
+  
+}
+.loader-hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+.loader::after{
+  content:"";
+  width: 75px;
+  height: 75px;
+  border:15px solid #dddddd;
+  border-top-color: #163aff;
+  border-radius: 50%;
+  animation: loading 2.75s ease infinite;
+}
+@keyframes loading{
+  from{
+    transform: rotate(0turn);
+  }
+  to{
+    transform: rotate(1turn);
+  }
+}
 :root {
   --color-primary: #191d2b;
   --color-secondary: #163aff;
